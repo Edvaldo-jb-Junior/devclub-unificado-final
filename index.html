@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevClub - Tudo o que você precisa para virar dev</title>
+  <meta name="description"
+    content="As melhores trilhas, os cursos mais práticos e a comunidade mais forte - dentro de uma única assinatura.">
+
+  <!-- CSS Nativo -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Fullscreen Canvas Background for Interactive Particle Network (60 FPS) -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Ambient Glow Overlay -->
+  <div class="bg-glow-top"></div>
+
+  <!-- Fixed Glassmorphism Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="container navbar-container">
+        <!-- Brand Logo (Logo Oficial do DevClub) -->
+        <a href="#" class="brand-logo">
+          <img src="assets/image_ad12d7.png" alt="DevClub Logo" class="brand-logo-img">
+        </a>
+
+        <!-- Navigation Links -->
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link">Início</a></li>
+          <li><a href="#salarios" class="nav-link">O Mercado</a></li>
+          <li><a href="#trilhas" class="nav-link">Trilhas</a></li>
+          <li><a href="#projetos" class="nav-link">Projetos</a></li>
+          <li><a href="#solucoes" class="nav-link">Plataforma</a></li>
+          <li><a href="#mentores" class="nav-link">Mentores</a></li>
+          <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+
+        <!-- Action Buttons -->
+        <div class="nav-actions">
+          <a href="#faq" class="btn btn-secondary">Área Aluno</a>
+          <a href="#trilhas" class="btn btn-primary">Quero ser aluno</a>
+          <button class="mobile-toggle" aria-label="Abrir Menu">☰</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content Area -->
+  <main>
+
+    <!-- Premium Cinematic Hero Section (#020617 Background, 100vh, 55% / 45% Split) -->
+    <section id="hero" class="hero">
+      <div class="container" style="height: 100%; display: flex; flex-direction: column;">
+        <div class="hero-split reveal">
+
+          <!-- Left Column (55% Width): Copy & CTAs -->
+          <div class="hero-left">
+            <!-- Pulse Badge -->
+            <div class="hero-badge">
+              <span class="pulse-dot"></span>
+              DEVCLUB HUB
+            </div>
+
+            <!-- Hero Headline -->
+            <h1 class="hero-title">
+              Tudo o que você precisa para <span class="gradient-text">virar dev</span>, em um só lugar
+            </h1>
+
+            <!-- Hero Subtitle -->
+            <p class="hero-description">
+              As melhores trilhas, os cursos mais práticos e a comunidade mais forte - dentro de uma única assinatura.
+            </p>
+
+            <!-- Hero CTAs -->
+            <div class="hero-actions">
+              <a href="#trilhas" class="btn btn-primary">Quero Fazer Parte →</a>
+              <a href="#solucoes" class="btn btn-secondary">Soluções →</a>
+            </div>
+
+            <!-- Social Proof Avatars -->
+            <div class="hero-social-proof">
+              <div class="avatar-group">
+                <span class="avatar-mini"><img /></span>
+                <span class="avatar-mini"><img src="" alt=""></span>
+                <span class="avatar-mini"><img src="" alt=""></span>
+                <span class="avatar-mini"><img src="" alt=""></span>
+              </div>
+              <span class="social-proof-text">Confiado por milhares de profissionais em todo o Brasil.</span>
+            </div>
+          </div>
+
+          <!-- Right Column (45% Width): Cinematic Image Transition + Interactive Lens Showcase -->
+          <div class="hero-right">
+            <!-- Ambient Neon Reflections -->
+            <div class="hero-neon-light"></div>
+
+            <div class="spotlight-container" id="spotlight-container">
+              <!-- Base Image: Futuristic Astronaut Helmet -->
+              <img src="assets/futuristic_astronaut_helmet.webp" alt="Futuristic Astronaut Helmet"
+                class="spotlight-base">
+
+              <!-- Spotlight Lens Image Revealed on Hover: Astronaut Looking Left -->
+              <div class="spotlight-overlay" id="spotlight-overlay">
+                <img src="assets/astronaut_looking_left.webp" alt="Astronaut Looking Left" class="spotlight-target">
+              </div>
+
+              <!-- Dark Cinematic Gradient Overlay -->
+              <div class="spotlight-cinematic-overlay"></div>
+
+              <!-- Soft Backdrop Blur Edge Fade -->
+              <div class="spotlight-blur-fade"></div>
+
+              <!-- Glowing Neon Lens Ring Pointer -->
+              <div class="spotlight-ring" id="spotlight-ring"></div>
+            </div>
+          </div>
+
+          <!-- Partner Companies Ribbon -->
+          <div class="hero-trust">
+            <p class="trust-text">Somos os professores escolhidos por devs de empresas como</p>
+            <div class="partner-logos">
+              <span class="logo-item">NUBANK</span>
+              <span class="logo-item">IFOOD</span>
+              <span class="logo-item">MERCADO LIVRE</span>
+              <span class="logo-item">GLOBO</span>
+              <span class="logo-item">STONE</span>
+              <span class="logo-item">PICPAY</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: O Mercado (Salary Statistics Grid) -->
+    <section id="salarios" class="section-padding salary-section">
+      <div class="container">
+        <div class="reveal" style="text-align: center;">
+          <span class="section-tag">O Mercado</span>
+          <h2 class="section-title">
+            Salários reais de devs no <span class="highlight">Brasil vs Exterior</span>
+          </h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Dados médios atualizados para a área de desenvolvimento de software (valores em BRL/ano).
+          </p>
+        </div>
+
+        <div class="salary-grid">
+          <!-- Junior Card -->
+          <div class="glass-card salary-card reveal">
+            <div>
+              <div class="salary-header">
+                <h3>Desenvolvedor Junior</h3>
+                <span class="level-badge">0 - 2 anos</span>
+              </div>
+              <div class="salary-comparison">
+                <div class="salary-row">
+                  <div class="salary-row-header">
+                    <span>Brasil</span>
+                    <span class="salary-val" data-target="48000">R$ 0 / ano</span>
+                  </div>
+                  <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" data-target-width="8%" style="width: 0%;"></div>
+                  </div>
+                </div>
+
+                <div class="salary-row">
+                  <div class="salary-row-header">
+                    <span>Exterior (Remoto USD)</span>
+                    <span class="salary-val highlight-green" data-target="180000">R$ 0 / ano</span>
+                  </div>
+                  <div class="progress-bar-bg">
+                    <div class="progress-bar-fill fill-green" data-target-width="30%" style="width: 0%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="salary-card-footer">Formação rápida com foco em projetos práticos.</p>
+          </div>
+
+          <!-- Pleno Card -->
+          <div class="glass-card salary-card reveal">
+            <div>
+              <div class="salary-header">
+                <h3>Desenvolvedor Pleno</h3>
+                <span class="level-badge">2 - 5 anos</span>
+              </div>
+              <div class="salary-comparison">
+                <div class="salary-row">
+                  <div class="salary-row-header">
+                    <span>Brasil</span>
+                    <span class="salary-val" data-target="96000">R$ 0 / ano</span>
+                  </div>
+                  <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" data-target-width="16%" style="width: 0%;"></div>
+                  </div>
+                </div>
+
+                <div class="salary-row">
+                  <div class="salary-row-header">
+                    <span>Exterior (Remoto USD)</span>
+                    <span class="salary-val highlight-green" data-target="360000">R$ 0 / ano</span>
+                  </div>
+                  <div class="progress-bar-bg">
+                    <div class="progress-bar-fill fill-green" data-target-width="60%" style="width: 0%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="salary-card-footer">Domínio de arquitetura e ferramentas modernas.</p>
+          </div>
+
+          <!-- Senior Card -->
+          <div class="glass-card salary-card reveal">
+            <div>
+              <div class="salary-header">
+                <h3>Desenvolvedor Senior</h3>
+                <span class="level-badge">5+ anos</span>
+              </div>
+              <div class="salary-comparison">
+                <div class="salary-row">
+                  <div class="salary-row-header">
+                    <span>Brasil</span>
+                    <span class="salary-val" data-target="180000">R$ 0 / ano</span>
+                  </div>
+                  <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" data-target-width="30%" style="width: 0%;"></div>
+                  </div>
+                </div>
+
+                <div class="salary-row">
+                  <div class="salary-row-header">
+                    <span>Exterior (Remoto USD)</span>
+                    <span class="salary-val highlight-green" data-target="600000" data-is-plus="true">R$ 0 / ano</span>
+                  </div>
+                  <div class="progress-bar-bg">
+                    <div class="progress-bar-fill fill-green" data-target-width="100%" style="width: 0%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="salary-card-footer">Liderança técnica, IA e automações avançadas.</p>
+          </div>
+        </div>
+
+        <!-- Marquee Infinite Scrolling Companies Ribbon (Imagem 2) -->
+        <div class="salary-partners-wrapper reveal">
+          <h4 class="salary-partners-title">Empresas que contrataram nossos alunos</h4>
+          <div class="marquee-container">
+            <div class="marquee-track">
+              <div class="marquee-item"><span class="company-badge-icon">🍔</span> iFood</div>
+              <div class="marquee-item"><span class="company-badge-icon">💜</span> Nubank</div>
+              <div class="marquee-item"><span class="company-badge-icon">🛒</span> Mercado Livre</div>
+              <div class="marquee-item"><span class="company-badge-icon">📺</span> Globo</div>
+              <div class="marquee-item"><span class="company-badge-icon">💎</span> Stone</div>
+              <div class="marquee-item"><span class="company-badge-icon">💚</span> PicPay</div>
+              <div class="marquee-item"><span class="company-badge-icon">⚖️</span> OAB</div>
+              <div class="marquee-item"><span class="company-badge-icon">🎓</span> UFRJ</div>
+              <div class="marquee-item"><span class="company-badge-icon">🇧🇷</span> Brasil Paralelo</div>
+              <div class="marquee-item"><span class="company-badge-icon">🏛️</span> USP</div>
+              <div class="marquee-item"><span class="company-badge-icon">🚀</span> Itaú</div>
+              <div class="marquee-item"><span class="company-badge-icon">⚡</span> XP Investimentos</div>
+
+              <!-- Duplicate list for seamless infinite marquee loop -->
+              <div class="marquee-item"><span class="company-badge-icon">🍔</span> iFood</div>
+              <div class="marquee-item"><span class="company-badge-icon">💜</span> Nubank</div>
+              <div class="marquee-item"><span class="company-badge-icon">🛒</span> Mercado Livre</div>
+              <div class="marquee-item"><span class="company-badge-icon">📺</span> Globo</div>
+              <div class="marquee-item"><span class="company-badge-icon">💎</span> Stone</div>
+              <div class="marquee-item"><span class="company-badge-icon">💚</span> PicPay</div>
+              <div class="marquee-item"><span class="company-badge-icon">⚖️</span> OAB</div>
+              <div class="marquee-item"><span class="company-badge-icon">🎓</span> UFRJ</div>
+              <div class="marquee-item"><span class="company-badge-icon">🇧🇷</span> Brasil Paralelo</div>
+              <div class="marquee-item"><span class="company-badge-icon">🏛️</span> USP</div>
+              <div class="marquee-item"><span class="company-badge-icon">🚀</span> Itaú</div>
+              <div class="marquee-item"><span class="company-badge-icon">⚡</span> XP Investimentos</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section: Trilhas & Formações (Apple Stacking Cards + 360 Masked Video) -->
+    <section id="trilhas" class="section-padding trilhas-section">
+      <div class="container">
+
+        <!-- Section Header -->
+        <div class="reveal" style="text-align: center; margin-bottom: 40px;">
+          <span class="section-tag">Formações Completas</span>
+          <h2 class="section-title">
+            trilhas organizadas <span class="highlight">do zero ao avançado</span>
+          </h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Aprenda com metodologia prática, sem enrolação e com suporte diário de professores.
+          </p>
+        </div>
+
+        <!-- 2 Columns Layout: Left = Cards Stack, Right = Seamless Masked Video Scrub -->
+        <div class="trilhas-split-layout">
+
+          <!-- Left Column (~55%): Filter Tabs + Interactive Timeline Cards -->
+          <div class="trilhas-left-col">
+
+            <!-- Interactive Filter Tabs -->
+            <div class="trilhas-filter">
+              <h1 class="filter-btn active" data-category="all">Nossas Trilhas</h1>
+            </div>
+
+            <!-- Vertical List (Cards com class learn e data-i="0" ate "8") -->
+            <div class="trilhas-vertical-list" id="trilhas-list">
+
+              <!-- Card 01 -->
+              <div class="glass-card trilha-card trilha-stack-item learn reveal" data-category="frontend" data-i="0">
+                <div class="trilha-card-main">
+                  <span class="trilha-tag-category">VOCÊ DOMINA</span>
+                  <h4 class="trilha-title">Front End Moderno</h4>
+                  <p class="trilha-desc">HTML5, CSS3, Flexbox, Grid, Animações, Responsividade e UX/UI.</p>
+                </div>
+                <div class="trilha-card-side">
+                  <span class="trilha-badge-num">01</span>
+                  <span class="lok">
+                    <svg viewBox="0 0 14 14" fill="none">
+                      <path d="M3 7.2l2.6 2.6L11 4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Card 02 -->
+              <div class="glass-card trilha-card trilha-stack-item learn reveal" data-category="frontend" data-i="1">
+                <div class="trilha-card-main">
+                  <span class="trilha-tag-category">VOCÊ CONSTRUIRÁ</span>
+                  <h4 class="trilha-title">JavaScript Completo</h4>
+                  <p class="trilha-desc">ES6+, Assincronismo, Promises, async/await, Canvas API e DOM.</p>
+                </div>
+                <div class="trilha-card-side">
+                  <span class="trilha-badge-num">02</span>
+                  <span class="lok">
+                    <svg viewBox="0 0 14 14" fill="none">
+                      <path d="M3 7.2l2.6 2.6L11 4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Card 03 -->
+              <div class="glass-card trilha-card trilha-stack-item learn reveal" data-category="frontend" data-i="2">
+                <div class="trilha-card-main">
+                  <span class="trilha-tag-category">VOCÊ CRIA</span>
+                  <h4 class="trilha-title">React & Ecossistema</h4>
+                  <p class="trilha-desc">Components, Hooks, State Management, Context API e Performance.</p>
+                </div>
+                <div class="trilha-card-side">
+                  <span class="trilha-badge-num">03</span>
+                  <span class="lok">
+                    <svg viewBox="0 0 14 14" fill="none">
+                      <path d="M3 7.2l2.6 2.6L11 4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Card 04 -->
+              <div class="glass-card trilha-card trilha-stack-item learn reveal" data-category="backend" data-i="3">
+                <div class="trilha-card-main">
+                  <span class="trilha-tag-category">VOCÊ CONECTA</span>
+                  <h4 class="trilha-title">Node.js PRO</h4>
+                  <p class="trilha-desc">APIs RESTful, Express, Prisma ORM, Autenticação JWT e SQL.</p>
+                </div>
+                <div class="trilha-card-side">
+                  <span class="trilha-badge-num">04</span>
+                  <span class="lok">
+                    <svg viewBox="0 0 14 14" fill="none">
+                      <path d="M3 7.2l2.6 2.6L11 4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+
+
+              <!-- Card 06 -->
+              <div class="glass-card trilha-card trilha-stack-item learn reveal" data-category="fullstack" data-i="5">
+                <div class="trilha-card-main">
+                  <span class="trilha-tag-category">FORMAÇÃO COMPLETA</span>
+                  <h4 class="trilha-title">FullStack PRO</h4>
+                  <p class="trilha-desc">A experiência completa do front ao backend com arquitetura e deploys.</p>
+                </div>
+                <div class="trilha-card-side">
+                  <span class="trilha-badge-num">06</span>
+                  <span class="lok">
+                    <svg viewBox="0 0 14 14" fill="none">
+                      <path d="M3 7.2l2.6 2.6L11 4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Card 07 -->
+              <div class="glass-card trilha-card trilha-stack-item learn reveal" data-category="ai" data-i="6">
+                <div class="trilha-card-main">
+                  <span class="trilha-tag-category">NOVA ERA IA</span>
+                  <h4 class="trilha-title">Gestor de IA & Prompting</h4>
+                  <p class="trilha-desc">Engenharia de Prompt, LLMs (Gemini, GPT), RAG e Agentes Autônomos.</p>
+                </div>
+                <div class="trilha-card-side">
+                  <span class="trilha-badge-num">07</span>
+                  <span class="lok">
+                    <svg viewBox="0 0 14 14" fill="none">
+                      <path d="M3 7.2l2.6 2.6L11 4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Card 08 -->
+              <div class="glass-card trilha-card trilha-stack-item learn reveal" data-category="ai" data-i="7">
+                <div class="trilha-card-main">
+                  <span class="trilha-tag-category">IA CLUB</span>
+                  <h4 class="trilha-title">Trilha N8N </h4>
+                  <p class="trilha-desc">Automações de processos de negócios e integração de sistemas.</p>
+                </div>
+                <div class="trilha-card-side">
+                  <span class="trilha-badge-num">08</span>
+                  <span class="lok">
+                    <svg viewBox="0 0 14 14" fill="none">
+                      <path d="M3 7.2l2.6 2.6L11 4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Card 09 -->
+              <div class="glass-card trilha-card trilha-stack-item learn reveal" data-category="ai" data-i="8">
+                <div class="trilha-card-main">
+                  <span class="trilha-tag-category">DATA CLUB</span>
+                  <h4 class="trilha-title">Análise de Dados PRO</h4>
+                  <p class="trilha-desc">PowerBI, SQL Avançado, Pandas e Dashboards de Negócios.</p>
+                </div>
+                <div class="trilha-card-side">
+                  <span class="trilha-badge-num">09</span>
+                  <span class="lok">
+                    <svg viewBox="0 0 14 14" fill="none">
+                      <path d="M3 7.2l2.6 2.6L11 4.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column (~45%): Video com a MESMA Máscara 360° em volta -->
+          <div class="trilhas-right-col">
+            <div class="masked-video-container" id="masked-video-container">
+
+              <!-- Canvas Element Scrubbed by Scroll (Image Sequence) -->
+              <canvas id="scrub-canvas" class="scrub-canvas"></canvas>
+
+              <!-- Dark Cinematic Gradient Overlay (igual Hero) -->
+              <div class="scrub-cinematic-overlay"></div>
+
+              <!-- Soft Backdrop Blur Edge Fade (igual Hero) -->
+              <div class="scrub-blur-fade"></div>
+
+              <!-- Subtle Neon Glow Ring around frame -->
+              <div class="scrub-neon-glow"></div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Tecnologias que Você Vai Dominar -->
+    <section id="tecnologias" class="section-padding" style="background: #030712; position: relative;">
+      <div class="container">
+
+        <!-- Header (Centrado) -->
+        <div class="reveal" style="text-align: center;">
+          <span class="section-tag">TECNOLOGIAS DE PONTA</span>
+          <h2 class="section-title">
+            Tecnologias que você vai <span class="highlight">desbloquear no DevClub</span>
+          </h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Passe o cursor sobre a imagem abaixo para revelar a pilha completa de ferramentas e frameworks mais
+            demandados pelo mercado global de tecnologia.
+          </p>
+        </div>
+
+        <!-- Tech Badges Marquee Ribbon (Rolagem Automática igual empresas) -->
+        <div class="marquee-container" style="margin-top: 36px;">
+          <div class="marquee-track tech-marquee-track">
+            <div class="tech-badge-item">
+              <span class="tech-badge-dot"></span> HTML5 & CSS3 Avançado
+            </div>
+            <div class="tech-badge-item">
+              <span class="tech-badge-dot"></span> JavaScript ES6+ & TypeScript
+            </div>
+            <div class="tech-badge-item">
+              <span class="tech-badge-dot"></span> React.js & Next.js
+            </div>
+            <div class="tech-badge-item">
+              <span class="tech-badge-dot"></span> Node.js, Express & Prisma
+            </div>
+            <div class="tech-badge-item">
+              <span class="tech-badge-dot"></span> Bancos de Dados SQL & PostgreSQL
+            </div>
+            <div class="tech-badge-item">
+              <span class="tech-badge-dot"></span> Engenharia de IA, RAG & N8N
+            </div>
+
+            <!-- Duplicate for Seamless Infinite Marquee Loop -->
+            <div class="tech-badge-item">
+              <span class="tech-badge-dot"></span> HTML5 & CSS3 Avançado
+            </div>
+            <div class="tech-badge-item">
+              <span class="tech-badge-dot"></span> JavaScript ES6+ & TypeScript
+            </div>
+            <div class="tech-badge-item">
+              <span class="tech-badge-dot"></span> React.js & Next.js
+            </div>
+            <div class="tech-badge-item">
+              <span class="tech-badge-dot"></span> Node.js, Express & Prisma
+            </div>
+            <div class="tech-badge-item">
+              <span class="tech-badge-dot"></span> Bancos de Dados SQL & PostgreSQL
+            </div>
+            <div class="tech-badge-item">
+              <span class="tech-badge-dot"></span> Engenharia de IA, RAG & N8N
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Mouse Lens Image (Parte de Baixo com 80% width) -->
+        <div class="reveal" style="margin-top: 44px; display: flex; justify-content: center;">
+          <div class="spotlight-container tech-spotlight-box">
+
+            <!-- Base Image: Cadeado -->
+            <img src="assets/cadeado.webp" alt="Cadeado Tecnologias Trancadas" class="spotlight-base">
+
+            <!-- Overlay Lens Image: Tecnologias -->
+            <div class="spotlight-overlay">
+              <img src="assets/tecnologias.webp" alt="Tecnologias Desbloqueadas" class="spotlight-target">
+            </div>
+
+            <!-- Dark Cinematic Gradient Overlay -->
+            <div class="spotlight-cinematic-overlay"></div>
+
+            <!-- Soft Backdrop Blur Edge Fade -->
+            <div class="spotlight-blur-fade"></div>
+
+            <!-- Glowing Neon Lens Ring Pointer -->
+            <div class="spotlight-ring"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section: Projetos Práticos e Reais -->
+    <section id="projetos" class="section-padding">
+      <div class="container">
+        <div class="reveal" style="text-align: center;">
+          <span class="section-tag">Portfólio de Respeito</span>
+          <h2 class="section-title">
+            Projetos práticos <span class="highlight">baseados no mercado real</span>
+          </h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Construa aplicações de alto nível que impressionam qualquer recrutador ou cliente.
+          </p>
+        </div>
+
+        <div class="marquee-container" style="padding: 20px 0;">
+          <div class="marquee-track projects-marquee-track">
+            <!-- Project 1 -->
+            <div class="glass-card project-card">
+              <div class="project-preview">
+                <img src="assets/projeto-mario.jpg" alt="Super Mario Browser Game" class="project-preview-img">
+              </div>
+              <div class="project-info">
+                <span class="project-tag">GAME CLONE</span>
+                <h4>Super Mario Browser Game</h4>
+                <p>Jogo 2D interativo com colisões, física e lógica pura em JavaScript Canvas.</p>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="glass-card project-card">
+              <div class="project-preview">
+                <img src="assets/projeto-instagram.jpg" alt="Instagram Web Clone" class="project-preview-img">
+              </div>
+              <div class="project-info">
+                <span class="project-tag">SOCIAL FEED</span>
+                <h4>Instagram Web Clone</h4>
+                <p>Interface responsiva com feed de fotos, comentários, likes e reels em tempo real.</p>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="glass-card project-card">
+              <div class="project-preview">
+                <img src="assets/projeto-apple.jpg" alt="Apple Landing Page" class="project-preview-img">
+              </div>
+              <div class="project-info">
+                <span class="project-tag">E-COMMERCE</span>
+                <h4>Apple Landing Page</h4>
+                <p>Animações suaves de scroll, troca dinâmica de cores de produto e carrinho.</p>
+              </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="glass-card project-card">
+              <div class="project-preview">
+                <img src="assets/projeto-netflix.jpg" alt="Netflix Platform" class="project-preview-img">
+              </div>
+              <div class="project-info">
+                <span class="project-tag">STREAMING UI</span>
+                <h4>Netflix Platform</h4>
+                <p>Catalogação de filmes com consumo de API externa TMDB e modal de trailers.</p>
+              </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="glass-card project-card">
+              <div class="project-preview">
+                <img src="assets/projeto-spotify.jpg" alt="Spotify Web Player" class="project-preview-img">
+              </div>
+              <div class="project-info">
+                <span class="project-tag">MUSIC APP</span>
+                <h4>Spotify Web Player</h4>
+                <p>Player de áudio nativo em JS com barra de progresso, playlist e controle de volume.</p>
+              </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="glass-card project-card">
+              <div class="project-preview">
+                <img src="assets/projeto-starbucks.jpg" alt="Starbucks Promo Page" class="project-preview-img">
+              </div>
+              <div class="project-info">
+                <span class="project-tag">LANDING PAGE</span>
+                <h4>Starbucks Promo Page</h4>
+                <p>Design interativo com galeria fluida, hover 3D e efeitos luminosos.</p>
+              </div>
+            </div>
+
+            <!-- Duplicate for Seamless Infinite Marquee Loop -->
+            <div class="glass-card project-card">
+              <div class="project-preview">
+                <img src="assets/projeto-mario.jpg" alt="Super Mario Browser Game" class="project-preview-img">
+              </div>
+              <div class="project-info">
+                <span class="project-tag">GAME CLONE</span>
+                <h4>Super Mario Browser Game</h4>
+                <p>Jogo 2D interativo com colisões, física e lógica pura em JavaScript Canvas.</p>
+              </div>
+            </div>
+
+            <div class="glass-card project-card">
+              <div class="project-preview">
+                <img src="assets/projeto-instagram.jpg" alt="Instagram Web Clone" class="project-preview-img">
+              </div>
+              <div class="project-info">
+                <span class="project-tag">SOCIAL FEED</span>
+                <h4>Instagram Web Clone</h4>
+                <p>Interface responsiva com feed de fotos, comentários, likes e reels em tempo real.</p>
+              </div>
+            </div>
+
+            <div class="glass-card project-card">
+              <div class="project-preview">
+                <img src="assets/projeto-apple.jpg" alt="Apple Landing Page" class="project-preview-img">
+              </div>
+              <div class="project-info">
+                <span class="project-tag">E-COMMERCE</span>
+                <h4>Apple Landing Page</h4>
+                <p>Animações suaves de scroll, troca dinâmica de cores de produto e carrinho.</p>
+              </div>
+            </div>
+
+            <div class="glass-card project-card">
+              <div class="project-preview">
+                <img src="assets/projeto-netflix.jpg" alt="Netflix Platform" class="project-preview-img">
+              </div>
+              <div class="project-info">
+                <span class="project-tag">STREAMING UI</span>
+                <h4>Netflix Platform</h4>
+                <p>Catalogação de filmes com consumo de API externa TMDB e modal de trailers.</p>
+              </div>
+            </div>
+
+            <div class="glass-card project-card">
+              <div class="project-preview">
+                <img src="assets/projeto-spotify.jpg" alt="Spotify Web Player" class="project-preview-img">
+              </div>
+              <div class="project-info">
+                <span class="project-tag">MUSIC APP</span>
+                <h4>Spotify Web Player</h4>
+                <p>Player de áudio nativo em JS com barra de progresso, playlist e controle de volume.</p>
+              </div>
+            </div>
+
+            <div class="glass-card project-card">
+              <div class="project-preview">
+                <img src="assets/projeto-starbucks.jpg" alt="Starbucks Promo Page" class="project-preview-img">
+              </div>
+              <div class="project-info">
+                <span class="project-tag">LANDING PAGE</span>
+                <h4>Starbucks Promo Page</h4>
+                <p>Design interativo com galeria fluida, hover 3D e efeitos luminosos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Plataforma de Ensino & Soluções -->
+    <section id="solucoes" class="section-padding">
+      <div class="container">
+        <div class="reveal" style="text-align: center;">
+          <span class="section-tag">Soluções DevClub</span>
+          <h2 class="section-title">
+            Plataforma moderna de ensino <span class="highlight">e aceleração</span>
+          </h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Tudo o que você precisa para estudar com eficiência e conquistar sua vaga.
+          </p>
+        </div>
+
+        <div class="marquee-container" style="padding: 20px 0;">
+          <div class="marquee-track features-marquee-track">
+            <!-- Feature 1 -->
+            <div class="glass-card feature-card">
+              <div class="feature-icon-wrapper">
+                <img src="assets/plataforma.png" alt="Plataforma 4K" class="feature-icon-img">
+              </div>
+              <div class="feature-content">
+                <h4>Plataforma de Ensino 4K</h4>
+                <p>Aulas gravadas em alta resolução, player rápido, controle de velocidade e anotações sincronizadas.
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="glass-card feature-card">
+              <div class="feature-icon-wrapper">
+                <img src="assets/trilha.png" alt="Trilhas Organizadas" class="feature-icon-img">
+              </div>
+              <div class="feature-content">
+                <h4>Cursos Organizados por Trilhas</h4>
+                <p>Trilhas estruturadas passo a passo para você aprender na ordem certa sem perder tempo.</p>
+              </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="glass-card feature-card">
+              <div class="feature-icon-wrapper">
+                <img src="assets/comunidade.png" alt="Comunidade Ativa" class="feature-icon-img">
+              </div>
+              <div class="feature-content">
+                <h4>Comunidade Ativa de Alunos</h4>
+                <p>Tire dúvidas diariamente, faça networking de valor e participe de desafios em grupo.</p>
+              </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="glass-card feature-card">
+              <div class="feature-icon-wrapper">
+                <img src="assets/clube-agentes.png" alt="Club Agents" class="feature-icon-img">
+              </div>
+              <div class="feature-content">
+                <h4>Club Agents (IAs Dedicadas)</h4>
+                <p>Inteligências Artificiais treinadas para revisar seu código 24/7 e tirar dúvidas de sintaxe.</p>
+              </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="glass-card feature-card">
+              <div class="feature-icon-wrapper">
+                <img src="assets/playground.png" alt="Playground de Treinamento" class="feature-icon-img">
+              </div>
+              <div class="feature-content">
+                <h4>Playground de Treinamento</h4>
+                <p>Pratique código diretamente no seu navegador com feedback de validação instantâneo.</p>
+              </div>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="glass-card feature-card">
+              <div class="feature-icon-wrapper">
+                <img src="assets/feature-icon-6.png" alt="Mural da Fama" class="feature-icon-img">
+              </div>
+              <div class="feature-content">
+                <h4>Mural da Fama dos Contratados</h4>
+                <p>Inspire-se com casos de alunos contratados por grandes empresas brasileiras e internacionais.</p>
+              </div>
+            </div>
+
+            <!-- Duplicate for Seamless Infinite Marquee Loop -->
+            <div class="glass-card feature-card">
+              <div class="feature-icon-wrapper">
+                <img src="assets/plataforma.png" alt="Plataforma 4K" class="feature-icon-img">
+              </div>
+              <div class="feature-content">
+                <h4>Plataforma de Ensino 4K</h4>
+                <p>Aulas gravadas em alta resolução, player rápido, controle de velocidade e anotações sincronizadas.
+                </p>
+              </div>
+            </div>
+
+            <div class="glass-card feature-card">
+              <div class="feature-icon-wrapper">
+                <img src="assets/trilha.png" alt="Trilhas Organizadas" class="feature-icon-img">
+              </div>
+              <div class="feature-content">
+                <h4>Cursos Organizados por Trilhas</h4>
+                <p>Trilhas estruturadas passo a passo para você aprender na ordem certa sem perder tempo.</p>
+              </div>
+            </div>
+
+            <div class="glass-card feature-card">
+              <div class="feature-icon-wrapper">
+                <img src="assets/comunidade.png" alt="Comunidade Ativa" class="feature-icon-img">
+              </div>
+              <div class="feature-content">
+                <h4>Comunidade Ativa de Alunos</h4>
+                <p>Tire dúvidas diariamente, faça networking de valor e participe de desafios em grupo.</p>
+              </div>
+            </div>
+
+            <div class="glass-card feature-card">
+              <div class="feature-icon-wrapper">
+                <img src="assets/clube-agentes.png" alt="Club Agents" class="feature-icon-img">
+              </div>
+              <div class="feature-content">
+                <h4>Club Agents (IAs Dedicadas)</h4>
+                <p>Inteligências Artificiais treinadas para revisar seu código 24/7 e tirar dúvidas de sintaxe.</p>
+              </div>
+            </div>
+
+            <div class="glass-card feature-card">
+              <div class="feature-icon-wrapper">
+                <img src="assets/playground.png" alt="Playground de Treinamento" class="feature-icon-img">
+              </div>
+              <div class="feature-content">
+                <h4>Playground de Treinamento</h4>
+                <p>Pratique código diretamente no seu navegador com feedback de validação instantâneo.</p>
+              </div>
+            </div>
+
+            <div class="glass-card feature-card">
+              <div class="feature-icon-wrapper">
+                <img src="assets/feature-icon-6.png" alt="Mural da Fama" class="feature-icon-img">
+              </div>
+              <div class="feature-content">
+                <h4>Mural da Fama dos Contratados</h4>
+                <p>Inspire-se com casos de alunos contratados por grandes empresas brasileiras e internacionais.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Mentores -->
+    <section id="mentores" class="section-padding mentores-section">
+      <div class="container">
+        <div class="reveal" style="text-align: center;">
+          <span class="section-tag">Nossa Equipe</span>
+          <h1 class="mentors-main-title">
+            Mentores que irão <span class="highlight">mudar sua vida</span>
+          </h1>
+          <h3 class="mentors-sub-title">
+            Especialista nas suas áreas
+          </h3>
+        </div>
+      </div>
+
+      <div class="marquee-container" style="padding: 20px 0;">
+        <div class="marquee-track mentors-marquee-track">
+          <!-- Card 1 -->
+          <div class="glass-card mentor-card">
+            <div class="mentor-img-wrapper">
+              <img src="assets/mentor-kacio.png" alt="Kácio Felipe" class="mentor-img">
+              <span class="mentor-badge">Especialista</span>
+            </div>
+            <div class="mentor-info">
+              <h4 class="mentor-name">Kácio Felipe</h4>
+              <p class="mentor-specialty">Front-end & UI Engineering</p>
+              <div class="mentor-footer">
+                <span class="mentor-duration">1h45m <i class="fas fa-play"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="glass-card mentor-card">
+            <div class="mentor-img-wrapper">
+              <img src="assets/mentor-bruno.png" alt="Bruno Biagioni" class="mentor-img">
+              <span class="mentor-badge">Especialista</span>
+            </div>
+            <div class="mentor-info">
+              <h4 class="mentor-name">Bruno Biagioni</h4>
+              <p class="mentor-specialty">Fullstack & Arquitetura Web</p>
+              <div class="mentor-footer">
+                <span class="mentor-duration">2h10m <i class="fas fa-play"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="glass-card mentor-card">
+            <div class="mentor-img-wrapper">
+              <img src="assets/mentor-radilson.png" alt="Radilson Gomes" class="mentor-img">
+              <span class="mentor-badge">Especialista</span>
+            </div>
+            <div class="mentor-info">
+              <h4 class="mentor-name">Radilson Gomes</h4>
+              <p class="mentor-specialty">Processo Criativo & Design</p>
+              <div class="mentor-footer">
+                <span class="mentor-duration">1h33m <i class="fas fa-play"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="glass-card mentor-card">
+            <div class="mentor-img-wrapper">
+              <img src="assets/mentor-gabe.png" alt="Gabe Bo" class="mentor-img">
+              <span class="mentor-badge">Especialista</span>
+            </div>
+            <div class="mentor-info">
+              <h4 class="mentor-name">Gabe Bo</h4>
+              <p class="mentor-specialty">Carreira Internacional</p>
+              <div class="mentor-footer">
+                <span class="mentor-duration">1h20m <i class="fas fa-play"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="glass-card mentor-card">
+            <div class="mentor-img-wrapper">
+              <img src="assets/mentor-aparicio.png" alt="Aparício Júnior" class="mentor-img">
+              <span class="mentor-badge">Especialista</span>
+            </div>
+            <div class="mentor-info">
+              <h4 class="mentor-name">Aparício Júnior</h4>
+              <p class="mentor-specialty">Como começar em UX Design</p>
+              <div class="mentor-footer">
+                <span class="mentor-duration">1h30m <i class="fas fa-play"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="glass-card mentor-card">
+            <div class="mentor-img-wrapper">
+              <img src="assets/mentor-nasser.png" alt="Nasser Ribeiro" class="mentor-img">
+              <span class="mentor-badge">Especialista</span>
+            </div>
+            <div class="mentor-info">
+              <h4 class="mentor-name">Nasser Ribeiro</h4>
+              <p class="mentor-specialty">Spline 3D & Interfaces</p>
+              <div class="mentor-footer">
+                <span class="mentor-duration">1h44m <i class="fas fa-play"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- DUPLICATED CARDS FOR SEAMLESS INFINITE SCROLL -->
+          <!-- Card 1 Duplicate -->
+          <div class="glass-card mentor-card">
+            <div class="mentor-img-wrapper">
+              <img src="assets/mentor-kacio.png" alt="Kácio Felipe" class="mentor-img">
+              <span class="mentor-badge">Especialista</span>
+            </div>
+            <div class="mentor-info">
+              <h4 class="mentor-name">Kácio Felipe</h4>
+              <p class="mentor-specialty">Front-end & UI Engineering</p>
+              <div class="mentor-footer">
+                <span class="mentor-duration">1h45m <i class="fas fa-play"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 Duplicate -->
+          <div class="glass-card mentor-card">
+            <div class="mentor-img-wrapper">
+              <img src="assets/mentor-bruno.png" alt="Bruno Biagioni" class="mentor-img">
+              <span class="mentor-badge">Especialista</span>
+            </div>
+            <div class="mentor-info">
+              <h4 class="mentor-name">Bruno Biagioni</h4>
+              <p class="mentor-specialty">Fullstack & Arquitetura Web</p>
+              <div class="mentor-footer">
+                <span class="mentor-duration">2h10m <i class="fas fa-play"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 Duplicate -->
+          <div class="glass-card mentor-card">
+            <div class="mentor-img-wrapper">
+              <img src="assets/mentor-radilson.png" alt="Radilson Gomes" class="mentor-img">
+              <span class="mentor-badge">Especialista</span>
+            </div>
+            <div class="mentor-info">
+              <h4 class="mentor-name">Radilson Gomes</h4>
+              <p class="mentor-specialty">Processo Criativo & Design</p>
+              <div class="mentor-footer">
+                <span class="mentor-duration">1h33m <i class="fas fa-play"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 Duplicate -->
+          <div class="glass-card mentor-card">
+            <div class="mentor-img-wrapper">
+              <img src="assets/mentor-gabe.png" alt="Gabe Bo" class="mentor-img">
+              <span class="mentor-badge">Especialista</span>
+            </div>
+            <div class="mentor-info">
+              <h4 class="mentor-name">Gabe Bo</h4>
+              <p class="mentor-specialty">Carreira Internacional</p>
+              <div class="mentor-footer">
+                <span class="mentor-duration">1h20m <i class="fas fa-play"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 Duplicate -->
+          <div class="glass-card mentor-card">
+            <div class="mentor-img-wrapper">
+              <img src="assets/mentor-aparicio.png" alt="Aparício Júnior" class="mentor-img">
+              <span class="mentor-badge">Especialista</span>
+            </div>
+            <div class="mentor-info">
+              <h4 class="mentor-name">Aparício Júnior</h4>
+              <p class="mentor-specialty">Como começar em UX Design</p>
+              <div class="mentor-footer">
+                <span class="mentor-duration">1h30m <i class="fas fa-play"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 Duplicate -->
+          <div class="glass-card mentor-card">
+            <div class="mentor-img-wrapper">
+              <img src="assets/mentor-nasser.png" alt="Nasser Ribeiro" class="mentor-img">
+              <span class="mentor-badge">Especialista</span>
+            </div>
+            <div class="mentor-info">
+              <h4 class="mentor-name">Nasser Ribeiro</h4>
+              <p class="mentor-specialty">Spline 3D & Interfaces</p>
+              <div class="mentor-footer">
+                <span class="mentor-duration">1h44m <i class="fas fa-play"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Depoimentos -->
+    <section id="depoimentos" class="section-padding">
+      <div class="container">
+        <div class="reveal" style="text-align: center;">
+          <span class="section-tag">Histórias Reais</span>
+          <h2 class="section-title">
+            Milhares de vidas <span class="highlight">transformadas</span>
+          </h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Veja o depoimento de quem decidiu começar e mudou de vida através da programação.
+          </p>
+        </div>
+
+        <div class="marquee-container" style="padding: 20px 0;">
+          <div class="marquee-track testimonials-marquee-track">
+            <!-- Testimonial 1 -->
+            <div class="glass-card testimonial-card">
+              <div>
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">
+                  Saí do absoluto zero para conquistar minha primeira vaga como desenvolvedor Junior ganhando R$ 4.500
+                  em
+                  apenas 6 meses. A didática do DevClub é surreal.
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-avatar"><img src="assets/depoimento-1.webp" alt="Gabriel S."></div>
+                <div>
+                  <div class="author-name">Gabriel S.</div>
+                  <div class="author-role">Dev Junior Contratado</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="glass-card testimonial-card">
+              <div>
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">
+                  A comunidade do DevClub me ajudou no meu primeiro freela de R$ 2.500. Hoje vivo 100% de programação
+                  como
+                  desenvolvedora Full Stack remota.
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-avatar">JM</div>
+                <div>
+                  <div class="author-name">Julia M.</div>
+                  <div class="author-role">FullStack Freelancer</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="glass-card testimonial-card">
+              <div>
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">
+                  Foi o melhor investimento que fiz na minha carreira. As trilhas são super organizadas e os projetos
+                  reais me deram um portfólio imbatível.
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-avatar">RL</div>
+                <div>
+                  <div class="author-name">Roberto L.</div>
+                  <div class="author-role">Desenvolvedor Pleno</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="glass-card testimonial-card">
+              <div>
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">
+                  Consegui migrar de carreira depois dos 30 anos. A metodologia 100% prática do DevClub me deu a
+                  confiança necessária para passar nos testes técnicos mais exigentes.
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-avatar">LP</div>
+                <div>
+                  <div class="author-name">Lucas P.</div>
+                  <div class="author-role">Frontend React Developer</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div class="glass-card testimonial-card">
+              <div>
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">
+                  O suporte da comunidade e a mentoria individualizada são inacreditáveis. Consegui minha primeira vaga
+                  remota em menos de 5 meses de estudo dedicado.
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-avatar">AR</div>
+                <div>
+                  <div class="author-name">Amanda R.</div>
+                  <div class="author-role">Backend Node.js Contratada</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div class="glass-card testimonial-card">
+              <div>
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">
+                  Dominar as ferramentas de Inteligência Artificial e N8N abriu portas gigantescas. Já no segundo mês
+                  prestei consultorias que pagaram meu ano todo.
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-avatar">FK</div>
+                <div>
+                  <div class="author-name">Felipe K.</div>
+                  <div class="author-role">Especialista IA & Automação</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Duplicate for Seamless Infinite Marquee Loop -->
+            <div class="glass-card testimonial-card">
+              <div>
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">
+                  Saí do absoluto zero para conquistar minha primeira vaga como desenvolvedor Junior ganhando R$ 4.500
+                  em
+                  apenas 6 meses. A didática do DevClub é surreal.
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-avatar">GS</div>
+                <div>
+                  <div class="author-name">Gabriel S.</div>
+                  <div class="author-role">Dev Junior Contratado</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-card testimonial-card">
+              <div>
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">
+                  A comunidade do DevClub me ajudou no meu primeiro freela de R$ 2.500. Hoje vivo 100% de programação
+                  como
+                  desenvolvedora Full Stack remota.
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-avatar">JM</div>
+                <div>
+                  <div class="author-name">Julia M.</div>
+                  <div class="author-role">FullStack Freelancer</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-card testimonial-card">
+              <div>
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">
+                  Foi o melhor investimento que fiz na minha carreira. As trilhas são super organizadas e os projetos
+                  reais me deram um portfólio imbatível.
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-avatar">RL</div>
+                <div>
+                  <div class="author-name">Roberto L.</div>
+                  <div class="author-role">Desenvolvedor Pleno</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-card testimonial-card">
+              <div>
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">
+                  Consegui migrar de carreira depois dos 30 anos. A metodologia 100% prática do DevClub me deu a
+                  confiança necessária para passar nos testes técnicos mais exigentes.
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-avatar">LP</div>
+                <div>
+                  <div class="author-name">Lucas P.</div>
+                  <div class="author-role">Frontend React Developer</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-card testimonial-card">
+              <div>
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">
+                  O suporte da comunidade e a mentoria individualizada são inacreditáveis. Consegui minha primeira vaga
+                  remota em menos de 5 meses de estudo dedicado.
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-avatar">AR</div>
+                <div>
+                  <div class="author-name">Amanda R.</div>
+                  <div class="author-role">Backend Node.js Contratada</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-card testimonial-card">
+              <div>
+                <div class="quote-icon">“</div>
+                <p class="testimonial-text">
+                  Dominar as ferramentas de Inteligência Artificial e N8N abriu portas gigantescas. Já no segundo mês
+                  prestei consultorias que pagaram meu ano todo.
+                </p>
+              </div>
+              <div class="author-info">
+                <div class="author-avatar">FK</div>
+                <div>
+                  <div class="author-name">Felipe K.</div>
+                  <div class="author-role">Especialista IA & Automação</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Garantia 7 Dias -->
+    <section id="garantia" class="section-padding">
+      <div class="container">
+        <div class="guarantee-card reveal">
+          <span class="guarantee-badge">7 DIAS DE GARANTIA INCONDICIONAL</span>
+          <h2 class="section-title">
+            Teste sem risco por <span class="highlight">7 dias completos</span>
+          </h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Entre, assista às aulas, tire suas dúvidas e crie seus primeiros projetos. Se por qualquer motivo você
+            decidir que o DevClub não é para você, devolvemos 100% do seu investimento. Sem perguntas.
+          </p>
+
+          <div class="guarantee-steps">
+            <div class="guarantee-step">
+              <span class="step-num">1</span>
+              <span>Assista às aulas</span>
+            </div>
+            <div class="guarantee-step">
+              <span class="step-num">2</span>
+              <span>Crie seu projeto</span>
+            </div>
+            <div class="guarantee-step">
+              <span class="step-num">3</span>
+              <span>Decida com calma</span>
+            </div>
+          </div>
+
+          <a href="#trilhas" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.1rem;">
+            Quero testar sem risco →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Perguntas Frequentes / FAQ Accordion -->
+    <section id="faq" class="section-padding">
+      <div class="container">
+        <div class="reveal" style="text-align: center;">
+          <span class="section-tag">Tire suas Dúvidas</span>
+          <h2 class="section-title">
+            Perguntas <span class="highlight">Frequentes</span>
+          </h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Tudo o que você precisa saber antes de fazer sua inscrição no DevClub.
+          </p>
+        </div>
+
+        <div class="faq-list reveal">
+          <!-- FAQ Item 1 -->
+          <div class="faq-item active">
+            <button class="faq-header">
+              <span>O DevClub é para quem está começando do zero?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              <p>Sim! Todas as trilhas começam dos fundamentos absolutos ao nível avançado, com projetos práticos passo
+                a passo e suporte diário para resolver qualquer dúvida.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-item">
+            <button class="faq-header">
+              <span>Já trabalho como programador, vale a pena pra mim?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              <p>Com certeza. Você pode acelerar sua carreira acessando formações avançadas de arquitetura, Inteligência
+                Artificial, automações e nossa área exclusiva de vagas.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-item">
+            <button class="faq-header">
+              <span>Sou de outra área (design, vendas, etc), consigo virar dev?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              <p>Muitos dos nossos melhores alunos vieram de outras profissões. Lógica de programação e construção de
+                interfaces são pontes naturais para qualquer pessoa que queira aprender.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="faq-item">
+            <button class="faq-header">
+              <span>As aulas são ao vivo ou gravadas?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              <p>As aulas principais são gravadas em alta resolução (4K) para você assistir no seu próprio ritmo,
+                complementadas por lives semanais de tira-dúvidas e mentoria em grupo.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="faq-item">
+            <button class="faq-header">
+              <span>Emite certificado ao concluir os cursos?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              <p>Sim, você recebe certificados individuais por cada trilha concluída e por cada projeto prático
+                finalizado com sucesso.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 6 -->
+          <div class="faq-item">
+            <button class="faq-header">
+              <span>Por quanto tempo tenho acesso a todo o conteúdo?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-body">
+              <p>Você terá 12 meses de acesso total a todas as trilhas, cursos atuais e novos lançamentos, podendo
+                renovar com um desconto especial para alunos ativos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <a href="#" class="brand-logo" style="margin-bottom: 12px; display: inline-flex;">
+            <img src="assets/image_ad12d7.png" alt="DevClub Logo" class="brand-logo-img">
+          </a>
+          <p style="font-size: 0.9rem; color: var(--text-muted); max-width: 320px;">
+            A maior e mais completa plataforma de formação em programação do Brasil.
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 36px; flex-wrap: wrap;">
+          <div>
+            <h5 style="color: var(--text-main); margin-bottom: 12px;">Trilhas</h5>
+            <ul
+              style="list-style: none; font-size: 0.88rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 8px;">
+              <li><a href="#trilhas">Front End</a></li>
+              <li><a href="#trilhas">Back End</a></li>
+              <li><a href="#trilhas">Full Stack</a></li>
+              <li><a href="#trilhas">IA & Automação</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h5 style="color: var(--text-main); margin-bottom: 12px;">Plataforma</h5>
+            <ul
+              style="list-style: none; font-size: 0.88rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 8px;">
+              <li><a href="#solucoes">Aulas 4K</a></li>
+              <li><a href="#solucoes">Comunidade</a></li>
+              <li><a href="#solucoes">Club Agents</a></li>
+              <li><a href="#garantia">Garantia</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 DevClub. Todos os direitos reservados. 100% Native Code.</p>
+        <p>DevClub - Formações e Trilhas de Programação</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fixed Bottom Notification Banner -->
+  <div class="bottom-banner bottom-cta-bar" id="bottom-cta-bar">
+    🔥 Inscrições abertas! Role para garantir sua vaga com 7 dias de garantia incondicional.
+  </div>
+
+  <!-- JavaScript Nativo ES6+ -->
+  <script src="script.js"></script>
+</body>
+
+</html>
