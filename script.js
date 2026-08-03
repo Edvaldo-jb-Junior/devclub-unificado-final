@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSalaryScrollAnimation();
   initVideoScrubAndCardFocus();
   initBottomBanner();
+  initInfiniteMarquees();
 });
 
 /* ============================================================================
@@ -179,7 +180,7 @@ function initSpotlightLens() {
 
     const updateLens = (x, y) => {
       container.classList.add('lens-active');
-      overlay.style.clipPath = `circle(110px at ${x}px ${y}px)`;
+      overlay.style.clipPath = `circle(70px at ${x}px ${y}px)`;
       ring.style.left = `${x}px`;
       ring.style.top = `${y}px`;
     };
@@ -531,6 +532,18 @@ function initBottomBanner() {
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
 }
+
+/* ============================================================================
+   10. AUTO-CLONE PARA MARQUEE INFINITO SEM DUPLICAR HTML
+   ============================================================================ */
+function initInfiniteMarquees() {
+  document.querySelectorAll('.marquee-track').forEach(track => {
+    if (track.dataset.cloned) return;
+    track.innerHTML += track.innerHTML; // duplica conteúdo
+    track.dataset.cloned = "true";
+  });
+}
+
 
 
 

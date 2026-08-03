@@ -643,8 +643,8 @@ button {
 /* Glowing Neon Lens Ring Pointer */
 .spotlight-ring {
   position: absolute;
-  width: 230px;
-  height: 230px;
+  width: 140px !important;
+  height: 140px !important;
   border: 2px solid var(--accent-green);
   border-radius: 50%;
   pointer-events: none;
@@ -866,37 +866,39 @@ button {
 }
 
 .marquee-container {
+  overflow: hidden !important;
+  width: 100% !important;
   position: relative;
-  width: 100%;
-  overflow: hidden;
   padding: 8px 0;
   -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 1) 12%, rgba(0, 0, 0, 1) 88%, transparent 100%);
   mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 1) 12%, rgba(0, 0, 0, 1) 88%, transparent 100%);
 }
 
 .marquee-track {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  width: max-content;
-  animation: marqueeScroll 30s linear infinite;
+  display: flex !important;
+  width: max-content !important;
+  gap: 20px !important;
+  animation: marquee-scroll 30s linear infinite !important;
+  will-change: transform !important;
 }
+
+.projects-marquee-track { animation-duration: 50s !important; }
+.features-marquee-track { animation-duration: 60s !important; }
+.mentors-marquee-track { animation-duration: 45s !important; }
+.testimonials-marquee-track { animation-duration: 70s !important; }
+.tech-marquee-track { animation-duration: 30s !important; }
 
 .marquee-track:hover {
-  animation-play-state: paused;
+  animation-play-state: paused !important;
 }
 
-@keyframes marqueeScroll {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
-.marquee-item {
+.marquee-item,
+.tech-badge-item {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -907,14 +909,14 @@ button {
   font-size: 0.88rem;
   font-weight: 600;
   color: var(--text-muted);
-  opacity: 0.6;
-  filter: grayscale(100%);
+  opacity: 0.85;
   transition: all 0.25s ease;
   white-space: nowrap;
   cursor: pointer;
 }
 
-.marquee-item:hover {
+.marquee-item:hover,
+.tech-badge-item:hover {
   opacity: 1;
   filter: grayscale(0%);
   color: #ffffff;
@@ -2087,7 +2089,7 @@ body {
   width: 320px !important;
   min-width: 320px !important;
   max-width: 320px !important;
-  height: 420px !important;
+  height: 350px !important;
   background: rgba(15, 23, 42, 0.75) !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 20px !important;
@@ -2122,9 +2124,9 @@ body {
 .mentor-img-wrapper {
   position: relative !important;
   width: 100% !important;
-  height: 220px !important;
-  min-height: 220px !important;
-  max-height: 220px !important;
+  height: 170px !important;
+  min-height: 170px !important;
+  max-height: 170px !important;
   overflow: hidden !important;
   background: #0d1322 !important;
   flex-shrink: 0 !important;
@@ -2135,9 +2137,9 @@ body {
 .feature-icon-wrapper {
   position: relative !important;
   width: 100% !important;
-  height: 220px !important;
-  min-height: 220px !important;
-  max-height: 220px !important;
+  height: 170px !important;
+  min-height: 170px !important;
+  max-height: 170px !important;
   flex-shrink: 0 !important;
   padding: 12px 12px 0 12px !important;
   box-sizing: border-box !important;
@@ -2257,10 +2259,33 @@ body {
   font-weight: 600 !important;
 }
 
-/* Card de Depoimentos Específico */
+/* Card de Depoimentos Específico - Altura Reduzida & Sem Espaço no Topo */
 .testimonial-card {
-  padding: 24px 22px !important;
+  height: 280px !important;
+  padding: 22px 22px !important;
 }
+
+.testimonial-card > div:first-child {
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  gap: 8px !important;
+}
+
+.testimonial-card .quote-icon {
+  font-size: 1.8rem !important;
+  line-height: 1 !important;
+  margin-bottom: 4px !important;
+  color: var(--accent-green) !important;
+}
+
+.testimonial-card .testimonial-text {
+  font-size: 0.92rem !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+}
+
 
 .author-info {
   display: flex !important;
@@ -2298,8 +2323,8 @@ body {
   width: 320px !important;
   min-width: 320px !important;
   max-width: 320px !important;
-  height: 420px !important;
-  max-height: 420px !important;
+  height: 350px !important;
+  max-height: 350px !important;
   overflow: hidden !important;
   display: flex !important;
   flex-direction: column !important;
@@ -2311,15 +2336,18 @@ body {
 #solucoes .feature-card .feature-icon-wrapper {
   position: relative !important;
   width: 100% !important;
-  height: 200px !important;
-  min-height: 200px !important;
-  max-height: 200px !important;
+  height: 170px !important;
+  min-height: 170px !important;
+  max-height: 170px !important;
   flex-shrink: 0 !important;
   flex-grow: 0 !important;
-  padding: 14px 14px 0 14px !important;
+  padding: 12px !important;
   box-sizing: border-box !important;
-  background: transparent !important;
+  background: rgba(10, 16, 30, 0.4) !important;
   overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 #solucoes .feature-card .feature-icon-wrapper .feature-icon-img {
@@ -2327,12 +2355,13 @@ body {
   height: 100% !important;
   max-width: 100% !important;
   max-height: 100% !important;
-  object-fit: cover !important;
-  object-position: top center !important;
+  object-fit: contain !important;
+  object-position: center !important;
   border-radius: 12px !important;
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgba(0, 255, 136, 0.3) !important;
   display: block !important;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+  background: #020617 !important;
 }
 
 #solucoes .feature-card .feature-content {
@@ -2358,4 +2387,83 @@ body {
   display: -webkit-box !important;
   -webkit-line-clamp: 3 !important;
   -webkit-box-orient: vertical !important;
+}
+
+/* ==========================================================================
+   28. SEÇÃO TECNOLOGIAS - MÁSCARA CINEMÁTICA 360° SUAVE (IGUAL AO HERO)
+   ========================================================================== */
+#tecnologias .tech-spotlight-box {
+  width: 92% !important;
+  max-width: 1250px !important;
+  height: 520px !important;
+  min-height: 520px !important;
+  margin: 30px auto 0 auto !important;
+  border-radius: 24px !important;
+  overflow: hidden !important;
+  position: relative !important;
+  display: block !important;
+  background: transparent !important;
+  border: none !important;
+
+  /* Máscara Cinemática 360° (Topo, Base, Esquerda, Direita) - Fusão suave no fundo */
+  -webkit-mask-image:
+    linear-gradient(to right,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.45) 8%,
+      rgba(0, 0, 0, 0.8) 16%,
+      rgba(0, 0, 0, 0.95) 24%,
+      rgba(0, 0, 0, 1) 32%,
+      rgba(0, 0, 0, 1) 68%,
+      rgba(0, 0, 0, 0.95) 76%,
+      rgba(0, 0, 0, 0.8) 84%,
+      rgba(0, 0, 0, 0.45) 92%,
+      rgba(0, 0, 0, 0) 100%),
+    linear-gradient(to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.45) 8%,
+      rgba(0, 0, 0, 0.8) 16%,
+      rgba(0, 0, 0, 0.95) 24%,
+      rgba(0, 0, 0, 1) 32%,
+      rgba(0, 0, 0, 1) 68%,
+      rgba(0, 0, 0, 0.95) 76%,
+      rgba(0, 0, 0, 0.8) 84%,
+      rgba(0, 0, 0, 0.45) 92%,
+      rgba(0, 0, 0, 0) 100%) !important;
+  mask-image:
+    linear-gradient(to right,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.45) 8%,
+      rgba(0, 0, 0, 0.8) 16%,
+      rgba(0, 0, 0, 0.95) 24%,
+      rgba(0, 0, 0, 1) 32%,
+      rgba(0, 0, 0, 1) 68%,
+      rgba(0, 0, 0, 0.95) 76%,
+      rgba(0, 0, 0, 0.8) 84%,
+      rgba(0, 0, 0, 0.45) 92%,
+      rgba(0, 0, 0, 0) 100%),
+    linear-gradient(to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.45) 8%,
+      rgba(0, 0, 0, 0.8) 16%,
+      rgba(0, 0, 0, 0.95) 24%,
+      rgba(0, 0, 0, 1) 32%,
+      rgba(0, 0, 0, 1) 68%,
+      rgba(0, 0, 0, 0.95) 76%,
+      rgba(0, 0, 0, 0.8) 84%,
+      rgba(0, 0, 0, 0.45) 92%,
+      rgba(0, 0, 0, 0) 100%) !important;
+  -webkit-mask-composite: destination-in !important;
+  mask-composite: intersect !important;
+}
+
+#tecnologias .tech-spotlight-box img,
+#tecnologias .spotlight-base,
+#tecnologias .spotlight-target,
+#tecnologias .spotlight-overlay img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transform: none !important;
+  scale: 1 !important;
+  object-position: center !important;
 }
