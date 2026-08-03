@@ -434,7 +434,7 @@ function initVideoScrubAndCardFocus() {
     images.push(img);
   }
 
-  // Desenha a imagem cobrindo o canvas na proporção 9/16
+  // Desenha a imagem contida no canvas proporcionalmente sem cortes ou dimensões gigantes
   function renderFrame(index) {
     const img = images[index];
     if (!img || !img.complete || !img.naturalWidth) return;
@@ -447,15 +447,15 @@ function initVideoScrubAndCardFocus() {
     let renderW, renderH, x, y;
 
     if (canvasRatio > imgRatio) {
+      renderH = ch;
+      renderW = ch * imgRatio;
+      x = (cw - renderW) / 2;
+      y = 0;
+    } else {
       renderW = cw;
       renderH = cw / imgRatio;
       x = 0;
       y = (ch - renderH) / 2;
-    } else {
-      renderW = ch * imgRatio;
-      renderH = ch;
-      x = (cw - renderW) / 2;
-      y = 0;
     }
 
     ctx.clearRect(0, 0, cw, ch);
