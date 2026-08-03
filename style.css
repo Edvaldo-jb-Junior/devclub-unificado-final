@@ -438,22 +438,37 @@ button {
 }
 
 .avatar-mini {
-  width: 28px;
-  height: 28px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  background: rgba(0, 255, 136, 0.32);
-  border: 0;
-  margin-left: -4px;
+  background: #0d1322;
+  border: 2px solid var(--accent-green);
+  margin-left: -8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.72rem;
-  font-weight: 800;
-  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.35);
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+  position: relative;
 }
 
 .avatar-mini:first-child {
   margin-left: 0;
+}
+
+.avatar-mini:hover {
+  transform: translateY(-3px) scale(1.1);
+  z-index: 5;
+}
+
+.avatar-mini img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  border-radius: 50% !important;
 }
 
 .social-proof-text {
