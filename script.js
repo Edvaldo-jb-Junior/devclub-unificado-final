@@ -62,7 +62,7 @@ function initParticleCanvas() {
 
   // Configuração das Partículas
   const particles = [];
-  const particleDensity = 90; // Quantidade de partículas
+  const particleDensity = 100; // Quantidade de partículas
 
   class Particle {
     constructor() {
