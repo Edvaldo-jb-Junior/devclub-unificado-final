@@ -421,11 +421,11 @@ function initVideoScrubAndCardFocus() {
     }
   }
 
-  // Pré-carrega todos os 40 frames da pasta img/ em memória
+  // Pré-carrega todos os 40 frames da pasta iframe/ em memória
   for (let i = 1; i <= totalFrames; i++) {
     const img = new Image();
     const frameNum = String(i).padStart(3, '0');
-    img.src = `img/ezgif-frame-${frameNum}.jpg`;
+    img.src = `iframe/ezgif-frame-${frameNum}.jpg`;
     img.onload = () => {
       loadedCount++;
       if (currentFrameIndex === 0 && (i === 1 || loadedCount === 1)) {
