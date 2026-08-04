@@ -391,9 +391,9 @@ button {
 
 .hero-title {
   color: #fff;
-  font-size: clamp(2.8rem, 3.7vw, 3.75rem);
+  font-size: clamp(1.96rem, 2.6vw, 2.625rem);
   font-weight: 900;
-  line-height: 0.96;
+  line-height: 1.08;
   letter-spacing: 0;
   margin-bottom: 26px;
   max-width: 700px;
@@ -2050,9 +2050,45 @@ footer.footer {
 
 
   /* --------------------------------------------------------------------------
-   16. Responsive Media Queries (768px)
+   16. Responsive Media Queries (920px)
    -------------------------------------------------------------------------- */
-  @media (max-width: 768px) {
+  @media (max-width: 920px) {
+    .hero {
+      height: auto !important;
+      min-height: auto !important;
+      padding-top: calc(var(--nav-height) + 50px) !important;
+      padding-bottom: 50px !important;
+    }
+
+    .hero-split {
+      grid-template-columns: 1fr !important;
+      gap: 30px !important;
+      height: auto !important;
+    }
+
+    .hero-left {
+      max-width: 100% !important;
+    }
+
+    .hero-right {
+      justify-content: center !important;
+      height: 360px !important;
+      min-height: 300px !important;
+      display: flex !important;
+    }
+
+    .spotlight-container {
+      max-height: 360px !important;
+      height: 340px !important;
+      margin-top: 10px !important;
+    }
+
+    .spotlight-base,
+    .spotlight-overlay img.spotlight-target {
+      object-fit: contain !important;
+      object-position: center !important;
+    }
+
     .section-padding {
       padding: 60px 0;
     }
